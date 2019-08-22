@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>【总结】Vue互斥单选及数据双向绑定 | drskysu&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如果是组合使用来实现互斥选择的效果，就需要 v-model 配合 value 来使用 template: &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;     &amp;lt;label for=&amp;quot;js&amp;quot;&amp;gt;js&amp;lt;input type=&amp;quot;radio&amp;quot; id=&amp;quot;js&amp;quot; v-model=&amp;quot;picked&amp;quot;">
+<meta name="keywords" content="FE, Python, Data Analysis, UI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【总结】Vue互斥单选及数据双向绑定">
+<meta property="og:url" content="http://drskysu.github.io/2019/08/22/【总结】Vue互斥单选及数据双向绑定/index.html">
+<meta property="og:site_name" content="drskysu&#39;s blog">
+<meta property="og:description" content="如果是组合使用来实现互斥选择的效果，就需要 v-model 配合 value 来使用 template: &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;     &amp;lt;label for=&amp;quot;js&amp;quot;&amp;gt;js&amp;lt;input type=&amp;quot;radio&amp;quot; id=&amp;quot;js&amp;quot; v-model=&amp;quot;picked&amp;quot;">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://drskysu.github.io/image/6.jpg">
+<meta property="og:updated_time" content="2019-08-22T02:15:41.603Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【总结】Vue互斥单选及数据双向绑定">
+<meta name="twitter:description" content="如果是组合使用来实现互斥选择的效果，就需要 v-model 配合 value 来使用 template: &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;     &amp;lt;label for=&amp;quot;js&amp;quot;&amp;gt;js&amp;lt;input type=&amp;quot;radio&amp;quot; id=&amp;quot;js&amp;quot; v-model=&amp;quot;picked&amp;quot;">
+<meta name="twitter:image" content="http://drskysu.github.io/image/6.jpg">
+  
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+</html>
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">Drsky Su</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+        
+          
+            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-weibo"></a>
+          
+        
+          
+            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-github"></a>
+          
+        
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">【总结】Vue互斥单选及数据双向绑定</h2>
+  <p class="sub">Aug 22, 2019</p>
+  <article class="content">
+    <p>如果是组合使用来实现互斥选择的效果，就需要 <code>v-model</code> 配合 <code>value</code> 来使用</p>
+<p><strong>template:</strong></p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;label for=&quot;js&quot;&gt;js&lt;input type=&quot;radio&quot; id=&quot;js&quot; v-model=&quot;picked&quot; value=&quot;js&quot;&gt;&lt;/label&gt;
+    &lt;label for=&quot;html&quot;&gt;html&lt;input type=&quot;radio&quot; id=&quot;html&quot; v-model=&quot;picked&quot; value=&quot;html&quot;&gt;&lt;/label&gt;
+    &lt;label for=&quot;css&quot;&gt;css&lt;input type=&quot;radio&quot; id=&quot;css&quot; v-model=&quot;picked&quot; value=&quot;css&quot;&gt;&lt;/label&gt;
+    &lt;div&gt;{{picked}}&lt;/div&gt;
+&lt;/div&gt;</code></pre><p><strong>js:</strong></p>
+<pre><code>var vm = new Vue({
+        el: &apos;#app&apos;,
+        data() {
+            return {
+                picked: &apos;js&apos;
+            }
+        },
+        methods: {
+
+        }
+    })</code></pre><p>数据 <code>picked</code> 的值与单选按钮的 <code>value</code> 值一致时，就会选中该项</p>
+
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2019/08/21/【在线】目前看到最好的React入门教程/" class="link f-fr">【在线】目前看到最好的React入门教程⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  alwdndx2009@163.com
+  
+    
+      
+        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Weibo</a>
+      
+    
+      
+        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">GitHub</a>
+      
+    
+  
+  <span class="copyright">All rights reserved @drsky_su</span>
+</footer>
+  </div>
+</body>
+</html>
